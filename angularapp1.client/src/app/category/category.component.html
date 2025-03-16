@@ -1,0 +1,9 @@
+<div class="container d-flex flex-wrap gap-3 mt-5">
+  <div class="card" style="width: 18rem;" *ngFor="let category of data">
+    <div class="card-body">
+      <h5 class="card-title">{{category.name}}</h5>
+      <p class="card-text">ID: {{category.id}}</p>
+      <a routerLink="/product/{{category.id}}" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
