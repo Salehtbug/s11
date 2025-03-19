@@ -9,5 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="src\app\MyService\" />
+    <Folder Include="src\app\Admin\" />
   </ItemGroup>
 </Project>

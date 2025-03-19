@@ -20,5 +20,6 @@ export class CategoryComponent {
     })
   }
 
-
+  //editCategory(categoryId: number) {
+  //  this.router.navigate(['/dashboard/editCategory', categoryId]); 
 }

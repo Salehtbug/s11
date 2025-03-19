@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <h2 class="text-center">Categories List</h2>
+
+    <div *ngIf="errorMessage" class="alert alert-danger text-center">
+        {{ errorMessage }}
+    </div>
+
+   
+        <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let category of data">
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+

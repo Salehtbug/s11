@@ -11,18 +11,32 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddcatComponent } from './Admin/addcat/addcat.component';
+import { AddproComponent } from './Admin/addpro/addpro.component';
+import { GetcatComponent } from './Admin/getcat/getcat.component';
+import { GetproComponent } from './Admin/getpro/getpro.component';
+import { GetprocatComponent } from './Admin/getprocat/getprocat.component';
+import { DahsboardComponent } from './Admin/dahsboard/dahsboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent,  // ✅ Make sure this is included
+    NavBarComponent,  
     SignInComponent,
     SignUpComponent,
     CategoryComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    DashboardComponent,
+    AddcatComponent,
+    AddproComponent,
+    GetcatComponent,
+    GetproComponent,
+    GetprocatComponent,
+    DahsboardComponent
   ],
   imports: [
     BrowserModule,
