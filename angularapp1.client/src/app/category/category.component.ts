@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ServicesService } from '../MyService/services.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -7,19 +8,20 @@ import { ServicesService } from '../MyService/services.service';
   styleUrl: './category.component.css'
 })
 export class CategoryComponent {
-  constructor(private service: ServicesService) { }
+  constructor(private service: ServicesService, private route: ActivatedRoute, private router: Router ) { }
 
   ngOnInit() {
     this.getData();
   }
 
-  data : any[] = []
+  data: any[] = []
   getData() {
     this.service.getCategories().subscribe(d => {
       this.data = d
     })
   }
 
-  //editCategory(categoryId: number) {
-  //  this.router.navigate(['/dashboard/editCategory', categoryId]); 
+  editCategory(categoryId: number) {
+    this.router.navigate(['/editcat', categoryId]);
+  }
 }

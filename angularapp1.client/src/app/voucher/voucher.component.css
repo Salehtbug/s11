@@ -1,0 +1,21 @@
+.voucher-card {
+  border-radius: 16px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+  .voucher-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .voucher-card .card-body {
+    padding: 1rem;
+  }
+
+  .voucher-card img {
+    max-height: 100px;
+    object-fit: contain;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+  }
+  

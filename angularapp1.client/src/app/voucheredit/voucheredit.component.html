@@ -1,0 +1,30 @@
+<div class="custom-modal-backdrop">
+    <div class="custom-modal">
+        <h4>Edit Voucher</h4>
+        <form>
+            <div class="mb-3">
+                <label>Name</label>
+                <input class="form-control" [(ngModel)]="voucher.name" name="name" />
+            </div>
+            <div class="mb-3">
+                <label>Price</label>
+                <input class="form-control" type="number" [(ngModel)]="voucher.price" name="price" />
+            </div>
+            <div class="mb-3">
+                <label>Quantity</label>
+                <input class="form-control" type="number" [(ngModel)]="voucher.quantity" name="quantity" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Image</label>
+                <input type="file" class="form-control" (change)="onImageChange($event)">
+            </div>
+            <div class="text-center mb-3">
+                <img [src]="voucher.image" class="img-thumbnail" style="max-width: 120px;" alt="Voucher Image">
+            </div>
+            <div class="text-end">
+                <button type="button" class="btn btn-secondary me-2" (click)="cancel()">Cancel</button>
+                <button type="button" class="btn btn-success" (click)="save()">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

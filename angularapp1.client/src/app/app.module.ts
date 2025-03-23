@@ -18,6 +18,10 @@ import { GetcatComponent } from './Admin/getcat/getcat.component';
 import { GetproComponent } from './Admin/getpro/getpro.component';
 import { GetprocatComponent } from './Admin/getprocat/getprocat.component';
 import { DahsboardComponent } from './Admin/dahsboard/dahsboard.component';
+import { EditcatComponent } from './editcat/editcat.component';
+import { EditproComponent } from './editpro/editpro.component';
+import { VoucherComponent } from './voucher/voucher.component';
+import { VouchereditComponent } from './voucheredit/voucheredit.component';
 
 
 @NgModule({
@@ -36,7 +40,11 @@ import { DahsboardComponent } from './Admin/dahsboard/dahsboard.component';
     GetcatComponent,
     GetproComponent,
     GetprocatComponent,
-    DahsboardComponent
+    DahsboardComponent,
+    EditcatComponent,
+    EditproComponent,
+    VoucherComponent,
+    VouchereditComponent
   ],
   imports: [
     BrowserModule,

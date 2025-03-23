@@ -11,6 +11,10 @@ import { GetproComponent } from './Admin/getpro/getpro.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddcatComponent } from './Admin/addcat/addcat.component';
 import { AddproComponent } from './Admin/addpro/addpro.component';
+import { GetprocatComponent } from './Admin/getprocat/getprocat.component';
+import { EditproComponent } from './editpro/editpro.component';
+import { EditcatComponent } from './editcat/editcat.component';
+import { VoucherComponent } from './voucher/voucher.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,8 +28,15 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'dashboard/addcat', component: AddcatComponent },
   { path: 'dashboard/addpro', component: AddproComponent },
+  { path: 'dashboard/addpro', component: AddproComponent },
+  { path: 'getCatpro/:id',component: GetprocatComponent  },
+  { path: 'editPro/:id', component: EditproComponent },
+  { path: 'editCat/:id', component: EditcatComponent },
+  { path: 'vaocher', component: VoucherComponent },
 
-  { path: '', redirectTo: '/home', pathMatch: 'full' } 
+
+
+  { path: '', redirectTo: '/dashboard/getCategories', pathMatch: 'full' }
 ];
 
 @NgModule({

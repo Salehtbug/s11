@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold text-dark">Voucher Manager</h2>
+            <p class="text-muted mb-0">Here you can view and manage all available vouchers.</p>
+        </div>
+        <button class="btn btn-success shadow-sm" (click)="openNewVoucher()">+ Add Voucher</button>
+    </div>
+    <hr class="w-25" />
+</div>
+
+
+
+<div class="container py-4">
+    <div class="row g-4">
+        <div *ngFor="let item of savedata" class="col-md-6 col-lg-4">
+            <div class="voucher-card card border-0 shadow-sm h-100">
+                <div class="row g-0">
+                    <div class="col-5 d-flex align-items-center justify-content-center bg-light rounded-start">
+                        <img [src]="item.image" class="img-fluid p-2" alt="{{ item.name }}">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">{{ item.name }}</h5>
+                            <p class="card-text mb-1 text-primary">
+                                Price: <strong>{{ item.price | number }} JD</strong>
+                            </p>
+                            <p class="card-text mb-1">Quantity: {{ item.quantity }}</p>
+                            <p class="card-text"><small class="text-muted">ID: {{ item.id }}</small></p>
+                            <button class="btn btn-sm btn-outline-primary mt-2" (click)="openEdit(item)">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-voucheredit *ngIf="selectedVoucher"
+                 [voucher]="selectedVoucher"
+                 (onSave)="handleSave($event)"
+                 (onCancel)="handleCancel()">
+</app-voucheredit>
+
+

@@ -36,4 +36,29 @@ export class ServicesService {
     return this._url.post<any>("https://67cd64b6dd7651e464ee3d63.mockapi.io/products", data);
   }
 
+  editCategory(id: number, data: any): Observable<any> {
+    return this._url.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`, data)
+  }
+
+  editProducts(id: number, data: any): Observable<any> {
+    return this._url.put(`https://67cd64b6dd7651e464ee3d63.mockapi.io/products/${id}`, data)
+  }
+  getCategoryById(id: number) {
+    return this._url.get<any>(`https://67cd64b6dd7651e464ee3d63.mockapi.io/categories/${id}`);
+  }
+
+  getProduct(): Observable<any[]> {
+    return this._url.get<any[]>("https://67cd64b6dd7651e464ee3d63.mockapi.io/products");
+  }
+  getvoacher() {
+    return this._url.get<any>('https://67d9ae8e35c87309f529c67f.mockapi.io/sign/voucher')
+  }
+  updateVoucher(voucher: any) {
+    return this._url.put(`https://67d9ae8e35c87309f529c67f.mockapi.io/sign/voucher/${voucher.id}`, voucher);
+  }
+  addVoucher(voucher: any) {
+    return this._url.post('https://67d9ae8e35c87309f529c67f.mockapi.io/sign/voucher', voucher);
+  }
+
+
 }
